@@ -9,7 +9,7 @@
 
         this.login = function (credentials) {
             var d = $q.defer();
-
+			
             $http.post(APP_CONST.PROPERTY.API_URL + '/auth/token', {
                 loginName: credentials.username,
                 password: credentials.password

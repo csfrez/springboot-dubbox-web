@@ -9,7 +9,6 @@
 
         this.retrieve = function retrieve() {
             var d = $q.defer();
-
             $http.get(APP_CONST.PROPERTY.API_URL + '/sys/user/info')
                 .success(function (data) {
                     d.resolve(data);

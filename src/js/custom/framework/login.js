@@ -19,6 +19,7 @@
                     if ($scope.rememberPwd) {
                         $localStorage[APP_CONST.STORAGE.AUTH_TOKEN] = data.access_token;
                     }
+					debugger;
                     $sessionStorage[APP_CONST.STORAGE.AUTH_TOKEN] = data.access_token;
                     sysUserService.retrieve()
                         .then(function (data) {
@@ -26,6 +27,7 @@
                             $rootScope.sysuser = data;
                             $state.go('app.dashboard');
                         });
+					
                     sysMenuService.nav()
                         .then(function (data) {
                             $localStorage[APP_CONST.STORAGE.MENU] = data;
